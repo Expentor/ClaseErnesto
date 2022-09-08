@@ -1,0 +1,6 @@
+import random
+
+Keycaps: Akko x Taiko
+Switches: Novelkey cream box lubed with Kcrytox GPL 205g0
+Case: KBDFANS 65% Wooden Case
+PCB: DZ65RGBV3
