@@ -1,4 +1,5 @@
-//No sirve
+//Problema resuelto
+//Aurelio Adair Fernandez Santiago
 
 #include <stdio.h>
 
@@ -11,9 +12,7 @@ int main(){
     printf("Ingrese el valor de b: \n");
     scanf("%d",&b);
 
-    for(int i=0; i<b; i++){
-        printf("%d", problem1(a, b));
-    }
+    printf("%d \n", problem1(a, b));
 
     return 0;
 }
@@ -25,5 +24,7 @@ int problem1(int a, int b){
     else if(a==0){
         return 0;
     }
-    return (a * a) * b;
+    else{
+        return a * problem1(a,b-1);
+    }
 }

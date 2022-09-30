@@ -1,4 +1,6 @@
 //Problema resuelto
+//Aurelio Adair Fernandez Santiago
+
 #include <stdio.h>
 
 int problem2(int n);
