@@ -12,7 +12,7 @@ int main(){
     printf("Ingrese el valor de b: \n");
     scanf("%d",&b);
 
-    printf("%d \n", problem1(a, b));
+    printf("Resultado = %d \n", problem1(a, b));
 
     return 0;
 }
