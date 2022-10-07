@@ -28,7 +28,7 @@ int main () {
     insertion(array, size);
     printf("\n");
 
-    for(int i=0; i<size; i++){
+    for(int i=0; i<size-1; i++){
         printf("%d, ", array[i]);
     }
 
