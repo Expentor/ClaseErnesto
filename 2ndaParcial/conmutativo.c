@@ -3,8 +3,8 @@
 int main(){
     int sum = 0;
 
-    for(int i=0; i<=49; i++){
-        sum = sum + ((2 * i) + 1);
+    for(int i=-5; i<=11; i++){
+        sum = sum + i;
     }
 
     printf("El resultado es: %d",sum);
