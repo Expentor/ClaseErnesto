@@ -1,7 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
-
-int A[5];
 
 void swap(int *x, int *y){
 	int key = *x;
@@ -59,6 +56,16 @@ void bobol(int *A, int n){
 	}
 }
 
+void leer_archivo(){
+	FILE* archivo;
+	int a[5];
+	char texto[20];
+	
+	archivo = fopen("datos.txt","rt");
+	fgets(texto,20,archivo);
+	fscanf(archivo,"%d",&a[0]);
+}
+
 void pantalla(int *A, int n){
 	for(int i = 0; i < n-1; i++)
 		printf("%d, ", A[i]);
@@ -66,42 +73,22 @@ void pantalla(int *A, int n){
 	printf("\n");
 }
 
-void leer_archivo(){
-	FILE* archivo;
-	char c, texto[20];
-	int j=0, i=0;
-
-	archivo = fopen("datos.txt","rt");
-	do{
-		c = fgetc(archivo);
-		if (c == ',') {
-			A[j] = atoi(texto);
-			j++;
-			for (int z = 0; z<i; z++)
-				texto[z]=0;
-			i=0;
-			continue;
-		}
-		texto[i] = c;
-		i++;
-	}while(c!= EOF);
-}
-
 int main(){
 
-	int n = 5;
+	int n = 0;
 
-	// printf("Escriba el tamaño del array: ");
-	// scanf("%d", &n);
+	printf("Escriba el tamaño del array: ");
+	scanf("%d", &n);
 
-	// printf("Array de %d posiciones\n", n);
+	int A[n];
 
-	// for(int i = 0; i < n; i++){
-		// printf("Escriba el numero de la posicion %d: ", i+1);
-	// 	scanf("%d", &A[i]);
-	// }
+	printf("Array de %d posiciones\n", n);
 
-	leer_archivo();
+	for(int i = 0; i < n; i++){
+		printf("Escriba el numero de la posicion %d: ", i+1);
+		scanf("%d", &A[i]);
+	}
+
 
 	printf("Input: ");
 	pantalla(A, n);
