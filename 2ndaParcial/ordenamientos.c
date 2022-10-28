@@ -49,7 +49,7 @@ void insertion_sort(int *A, int n){
 	}
 }
 
-void bobol(int *A, int n){
+void bubble(int *A, int n){
 	for(int i = 1; i < n; i++){
 		for(int j = 0; j < n-1; j++){
 			if(A[j] > A[j+1]){
@@ -107,8 +107,8 @@ int main(){
 	pantalla(A, n);
 
 	//insertion_sort(A, n);
-	//bobol(A, n);
-	quicksort(A,0,n);
+	//bubble(A, n);
+	quicksort(A,0,n-1);
 
 	printf("Output: ");
 	pantalla(A, n);
