@@ -87,6 +87,19 @@ void leer_archivo(){
 	}while(c!= EOF);
 }
 
+void examen(int *A, int n){
+	int saco;
+	for(int i=0; i<n; i++){
+		for(int j=i+1; j<n; j++){
+			if(A[i] > A[j]){
+				saco = A[i];
+				A[i] = A[j];
+				A[j] = saco;
+			}
+		}
+	}
+}
+ 
 int main(){
 
 	int n = 5;
@@ -108,7 +121,8 @@ int main(){
 
 	//insertion_sort(A, n);
 	//bubble(A, n);
-	quicksort(A,0,n-1);
+	//quicksort(A,0,n-1);
+	examen(A, n);
 
 	printf("Output: ");
 	pantalla(A, n);
