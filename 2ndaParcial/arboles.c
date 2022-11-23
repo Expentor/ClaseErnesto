@@ -6,7 +6,7 @@ struct node{
     struct node* right_child;
 
     int info;
-};
+};//missing ""
 
 struct node* newNode(int data){
     size_t node_size = sizeof(struct node);
